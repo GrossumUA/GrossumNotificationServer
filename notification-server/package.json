@@ -1,0 +1,16 @@
+{
+  "name": "notification-service",
+  "version": "1.0.0",
+  "description": "gig notification service",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.4.1",
+    "dotenv": "^2.0.0",
+    "mailchimp": "^1.1.4",
+    "smpp": "^0.2.0",
+    "socket.io": "^1.4.5",
+    "winston": "^2.1.1"
+  }
+}

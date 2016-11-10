@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+    node:
+        build: docker/node
+        depends_on:
+            - rabbitmq
+        ports:
+            - "80:80"
+            - "443:443"
+        links:
+            - rabbitmq
+        volumes:
+            - ./notification-server:/var/www/notification-server
+        working_dir: /var/www/notification-server
+
+    rabbitmq:
+        build: docker/rabbitmq
+        volumes:
+            - ./var/rabbitmq:/var/lib/rabbitmq
+        ports:
+            - "5672:5672"
+            - "15671:15671"
+            - "15672:15672"

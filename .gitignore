@@ -1,0 +1,6 @@
+docker-compose.yml
+.idea
+notification-server/node_modules
+notification-server/logs
+notification-server/.env
+var/rabbitmq
